@@ -1,0 +1,22 @@
+<div *ngIf="isLoading" style="text-align: center;">
+  <app-loader></app-loader>
+</div>
+<div *ngIf="!isLoading">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title">Добре дошли във филми!</h1>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="row movie-container">
+      <ul *ngIf="movies">
+        <li *ngFor="let movie of movies" class="col-md-2 thumbnail border-background">
+          <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
+          <h5>{{ movie.title }}</h5>
+          <p>{{ movie.release_date }}</p>
+          <p><a class="btn btn-default" routerLink="/movie-edit/{{movie.id}}">Детайли</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

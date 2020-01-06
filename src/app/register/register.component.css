@@ -1,0 +1,35 @@
+.register-component {
+  width: 100%;
+  background-color: #ebeeef;
+  min-height: 93vh;
+}
+
+h2 {
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+}
+
+.border {
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: white;
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+.buttons-section
+  :nth-child(1) {
+  margin-right: 0.5rem;
+  }:nth-child(2) {
+    margin-left: 0.5rem;
+  }
+
+.buttons-section {
+  margin-bottom: 0;
+}
+
+label {
+  color: gray;
+}

@@ -1,0 +1,64 @@
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+
+.login-component {
+  min-height: 93vh;
+  background-color: #ebeeef;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2.5rem;
+  height: 93.5vh;
+  background-size: cover;
+}
+
+.container {
+  border-radius: 10px;
+  background-color: #fff;;
+  color: gray;
+  width: 50em;
+  position: relative;
+  top: 8rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.register-question {
+  color: gray;
+  position: absolute;
+  left: 22rem;
+  margin-top: 4px;
+}
+
+.login-header {
+  background-image: url(../img/download.jpg);
+  padding:  55px 15px 55px;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.login-form-title {
+  font-family: Poppins-Bold;
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.container
+  .login-header {
+  margin-bottom: 12px;
+}
+
+.btn {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  margin-left: 2.5em;
+  width: 90%;
+}
+
+a:hover {
+  text-decoration: none;
+}

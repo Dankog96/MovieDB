@@ -1,0 +1,28 @@
+<div *ngIf="isLoading" style="text-align: center;">
+  <app-loader></app-loader>
+</div>
+<div *ngIf="!isLoading">
+  <div *ngIf="selectedMovie">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1 class="panel-title">{{ selectedMovie.title }}</h1>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-5">
+            <img class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{selectedMovie.poster_path}}" alt="{{selectedMovie.title}}">
+          </div>
+          <div class="col-md-7">
+            <ul class="list-group">
+              <li class="list-group-item">Премиера: {{ selectedMovie.release_date }}</li>
+              <li class="list-group-item">Описание: {{ selectedMovie.overview }}</li>
+              <li class="list-group-item">Рейтинг: {{ selectedMovie.vote_average }}</li>
+              <li class="list-group-item">Жанр: <span *ngFor="let genre of selectedMovie.genres">{{ genre.name }}</span></li>
+            </ul>
+            <button class="btn btn-default" (click)="getBack()">Назад</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

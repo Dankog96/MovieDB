@@ -1,0 +1,21 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/home" class="navbar-brand"><span class="glyphicon glyphicon-home"><span class="home">Филми</span></span></a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav list-unstyled">
+        <li routerLinkActive="active"><a routerLink="/top-movies" style="cursor: pointer;">Топ 20 филма</a></li>
+        <li class="dropdown" appDropDown>
+          <a style="cursor: pointer;" class="dropdown-toggle">Категории<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor: pointer;">Комедия</a></li>
+            <li><a style="cursor: pointer;">Екшън</a></li>
+            <li><a style="cursor: pointer;">Драма</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

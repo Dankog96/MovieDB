@@ -1,0 +1,22 @@
+<div style="text-align: center;" *ngIf="isLoading">
+  <app-loader></app-loader>
+</div>
+<div class="login-component" style="text-align: center;" *ngIf="!isLoading">
+  <div class="container" >
+    <div class="login-header">
+      <span class="login-form-title">Влизане</span>
+    </div>
+    <form (ngSubmit)="onLogin()" #login="ngForm" class="login-form">
+      <div class="form-group">
+        <label for="username">Потребителско име</label>
+        <input class="form-control" type="text" name="mail" ngModel required>
+      </div>
+      <div class="form-group">
+        <label for="password">Парола</label>
+        <input class="form-control" type="password" name="password" ngModel required>
+      </div>
+      <button class="btn btn-success" type="submit">Влез</button>
+    </form>
+    <span class="register-question"><span>Нямаш регистрация?</span><a style="cursor: pointer;" routerLink="/register"> Регистрирай се</a></span>
+  </div>
+</div>
