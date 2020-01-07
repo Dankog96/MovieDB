@@ -33,8 +33,7 @@ input.ng-invalid.ng-touched{
 }
 
 .layer {
-  background-color: rgba(100, 100, 100, 0.829);
-  opacity: 0.8;
+  background: rgba(70, 87, 150, 0.596);
   width: 100%;
   height: 100%;
   border-radius: 10px 10px 0px 0px;
