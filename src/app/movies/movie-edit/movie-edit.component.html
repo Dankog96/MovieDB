@@ -2,22 +2,22 @@
   <app-loader></app-loader>
 </div>
 <div *ngIf="!isLoading">
-  <div *ngIf="selectedMovie">
+  <div *ngIf="movieDetails.title.length">
     <div class="panel panel-default">
-      <div class="panel-heading">
-        <h1 class="panel-title">{{ selectedMovie.title }}</h1>
+      <div class="panel-heading" *ngIf="movieDetails.title">
+        <h1 class="panel-title">{{ movieDetails.title }}</h1>
       </div>
       <div class="panel-body">
         <div class="row">
-          <div class="col-md-5">
-            <img class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{selectedMovie.poster_path}}" alt="{{selectedMovie.title}}">
+          <div class="col-md-5" *ngIf="movieDetails.poster_path">
+            <img class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movieDetails.poster_path}}" alt="{{movieDetails.title}}">
           </div>
           <div class="col-md-7">
             <ul class="list-group">
-              <li class="list-group-item">Премиера: {{ selectedMovie.release_date }}</li>
-              <li class="list-group-item">Описание: {{ selectedMovie.overview }}</li>
-              <li class="list-group-item">Рейтинг: {{ selectedMovie.vote_average }}</li>
-              <li class="list-group-item">Жанр: <span *ngFor="let genre of selectedMovie.genres">{{ genre.name }}</span></li>
+              <li class="list-group-item" *ngIf="movieDetails.release_date">Премиера: {{ movieDetails.release_date }}</li>
+              <li class="list-group-item" *ngIf="movieDetails.overview">Описание: {{ movieDetails.overview }}</li>
+              <li class="list-group-item" *ngIf="movieDetails.vote_average">Рейтинг: {{ movieDetails.vote_average }}</li>
+              <li class="list-group-item" *ngIf="movieDetails.genre">Жанр: {{ movieDetails.genre }}</li>
             </ul>
             <button class="btn btn-default" (click)="getBack()">Назад</button>
           </div>

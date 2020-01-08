@@ -16,18 +16,16 @@ export class TopMoviesDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
+
     this.route.params.subscribe( movie => {
       const id = movie.id;
-      this.moviesService.getSelectedMovie(id).subscribe((selectedMovie: any) => {
+
+      this.moviesService.getSelectedMovie(id).subscribe( (selectedMovie: any) => {
+        this.movieDetails = selectedMovie;
         this.movieDetails.genre = selectedMovie.genres.map( genre => {
           return genre.name;
-        }),
-        this.movieDetails.id = selectedMovie.id;
-        this.movieDetails.overview = selectedMovie.overview;
-        this.movieDetails.release_date = selectedMovie.release_date;
-        this.movieDetails.vote_average = selectedMovie.vote_average;
-        this.movieDetails.title = selectedMovie.title;
-        this.movieDetails.poster_path = selectedMovie.poster_path;
+        });
+
         this.isLoading = false;
       });
     });
