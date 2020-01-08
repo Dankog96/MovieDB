@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TopMoviesDetailsComponent } from '../movies/top-movies/top-movies-details/top-movies-details.component';
 import { EditMovieComponent } from '../movies/movie-edit/movie-edit.component';
 import { TopMoviesComponent } from '../movies/top-movies/top-movies.component';
 import { RegisterComponent } from '../register/register.component';
@@ -12,9 +11,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: MoviesComponent },
-  { path: 'movie-edit/:id', component: EditMovieComponent },
+  { path: 'movie-details/:id', component: EditMovieComponent },
   { path: 'top-movies', component: TopMoviesComponent},
-  { path: 'top-movie-detail/:id', component: TopMoviesDetailsComponent}
 ];
 
 @NgModule({

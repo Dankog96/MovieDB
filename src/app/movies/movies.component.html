@@ -14,7 +14,7 @@
           <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}">
           <h5>{{ movie.title }}</h5>
           <p>{{ movie.release_date }}</p>
-          <p><a class="btn btn-default" routerLink="/movie-edit/{{movie.id}}">Детайли</a></p>
+          <p><a class="btn btn-default" routerLink="/movie-details/{{movie.id}}">Детайли</a></p>
         </li>
       </ul>
     </div>

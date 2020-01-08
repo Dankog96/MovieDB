@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MoviesService } from 'src/app/services/movies.service';
 import { MoviesModel } from 'src/app/models/movies.model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-movie-edit',
@@ -12,7 +13,7 @@ export class EditMovieComponent implements OnInit {
   movieDetails = new MoviesModel('', '', '', [''], '', '', '');
   isLoading = false;
 
-  constructor(private moviesService: MoviesService, private router: Router, private route: ActivatedRoute) {}
+  constructor(private moviesService: MoviesService, private router: Router, private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit() {
     this.isLoading = true;
@@ -32,6 +33,6 @@ export class EditMovieComponent implements OnInit {
   }
 
   getBack() {
-    this.router.navigate(['/home'], {relativeTo: this.route});
+    this.location.back();
   }
 }
