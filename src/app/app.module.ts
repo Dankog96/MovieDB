@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { LoaderIndicatorComponent } from './shared/loader-indicator/loader-indicator.component';
-import { EditMovieComponent } from './movies/movie-edit/movie-edit.component';
+import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 import { TopMoviesComponent } from './movies/top-movies/top-movies.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
-import { MoviesComponent } from './movies/movies.component';
+import { MoviesComponent } from './movies/movies/movies.component';
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { DropDownDirective } from './shared/shared.directive';
@@ -21,7 +21,7 @@ import { DropDownDirective } from './shared/shared.directive';
     LoginComponent,
     RegisterComponent,
     MoviesComponent,
-    EditMovieComponent,
+    MovieDetailsComponent,
     TopMoviesComponent,
     LoaderIndicatorComponent,
     DropDownDirective

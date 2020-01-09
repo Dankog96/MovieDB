@@ -5,11 +5,11 @@ import { MoviesModel } from 'src/app/models/movies.model';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-movie-edit',
-  templateUrl: 'movie-edit.component.html',
-  styleUrls: ['movie-edit.component.css']
+  selector: 'app-movie-details',
+  templateUrl: 'movie-details.component.html',
+  styleUrls: ['movie-details.component.css']
 })
-export class EditMovieComponent implements OnInit {
+export class MovieDetailsComponent implements OnInit {
   movieDetails = new MoviesModel('', '', '', [''], '', '', '');
   isLoading = false;
 

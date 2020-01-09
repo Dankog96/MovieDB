@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { EditMovieComponent } from '../movies/movie-edit/movie-edit.component';
+import { MovieDetailsComponent } from '../movies/movie-details/movie-details.component';
 import { TopMoviesComponent } from '../movies/top-movies/top-movies.component';
 import { RegisterComponent } from '../register/register.component';
-import { MoviesComponent } from '../movies/movies.component';
+import { MoviesComponent } from '../movies/movies/movies.component';
 import { LoginComponent } from '../login/login.component';
 
 const appRoutes: Routes = [
-  { path: 'movie-details/:id', component: EditMovieComponent },
+  { path: 'movie-details/:id', component: MovieDetailsComponent },
   { path: 'top-movies', component: TopMoviesComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
