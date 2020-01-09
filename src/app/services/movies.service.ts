@@ -10,11 +10,12 @@ export class MoviesService {
   private movieAuth = '?api_key=';
   private movie = 'movie/';
   private apiKey = '1707047ad46cd363741b800721fb37ba';
+  private bestDramas = 'discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10';
 
   constructor(private http: HttpClient) {}
 
   getMovies() {
-    return this.http.get(`${this.path}${this.moviesInTheaters}${this.auth}${this.apiKey}`, );
+    return this.http.get(`${this.path}${this.moviesInTheaters}${this.auth}${this.apiKey}`);
   }
 
   getSelectedMovie(id) {
@@ -23,5 +24,9 @@ export class MoviesService {
 
   getTop20() {
     return this.http.get(`${this.path}${this.top20}${this.auth}${this.apiKey}`);
+  }
+
+  getBestDramas() {
+    return this.http.get(`${this.path}${this.bestDramas}${this.auth}${this.apiKey}`);
   }
 }
