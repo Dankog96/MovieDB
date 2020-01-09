@@ -8,11 +8,12 @@ import { MoviesComponent } from '../movies/movies.component';
 import { LoginComponent } from '../login/login.component';
 
 const appRoutes: Routes = [
-  { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent },
-  { path: 'home', component: MoviesComponent },
   { path: 'movie-details/:id', component: EditMovieComponent },
   { path: 'top-movies', component: TopMoviesComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'register', component: RegisterComponent },
+  { path: 'home', component: MoviesComponent },
+  { path: 'login', component: LoginComponent},
 ];
 
 @NgModule({
