@@ -2,7 +2,7 @@ export class MoviesModel {
   title: string;
   poster_path: string;
   release_date: string;
-  genre: string[];
+  genre: any;
   id: string;
   overview: string;
   vote_average: string;

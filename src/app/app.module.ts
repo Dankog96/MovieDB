@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
+import { DramaMoviesComponent } from './movies/movie-genres/drama-movies/drama-movies.component';
 import { LoaderIndicatorComponent } from './shared/loader-indicator/loader-indicator.component';
 import { MovieDetailsComponent } from './movies/movie-details/movie-details.component';
 import { TopMoviesComponent } from './movies/top-movies/top-movies.component';
@@ -24,6 +25,7 @@ import { DropDownDirective } from './shared/shared.directive';
     MovieDetailsComponent,
     TopMoviesComponent,
     LoaderIndicatorComponent,
+    DramaMoviesComponent,
     DropDownDirective
   ],
   imports: [
