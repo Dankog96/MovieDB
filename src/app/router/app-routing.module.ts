@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { DramaMoviesComponent } from '../movies/movie-genres/drama-movies/drama-movies.component';
 import { MovieDetailsComponent } from '../movies/movie-details/movie-details.component';
 import { TopMoviesComponent } from '../movies/top-movies/top-movies.component';
 import { RegisterComponent } from '../register/register.component';
@@ -9,11 +10,13 @@ import { LoginComponent } from '../login/login.component';
 
 const appRoutes: Routes = [
   { path: 'movie-details/:id', component: MovieDetailsComponent },
+  { path: 'drama-movies', component: DramaMoviesComponent},
   { path: 'top-movies', component: TopMoviesComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: MoviesComponent },
   { path: 'login', component: LoginComponent},
+
 ];
 
 @NgModule({
